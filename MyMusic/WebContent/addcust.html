@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<link href="style.css" rel="stylesheet" />
+<style>
+sup {
+color:red;
+}
+table{
+margin-top:50px;
+}
+td{
+padding:5px;
+color:#f2f2f2;
+}
+#add{
+width:100px;
+height:30px;
+margin-top:30px;
+font-size:15px;
+}
+#s2 {
+height:50px;
+width:120px;
+font-size:25;
+margin-left:1000px;	
+margin-top:30px;
+}
+.logo{
+float: left;
+margin-top: 15px;
+position:absolute;
+margin-left:30px;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color:black;
+    font-size:30px;
+    font-style:italic;   
+  }
+li {
+    float: right;
+ }
+a:hover{
+color:#ffccff;
+font-size: 120%;
+}
+li a {
+    display: block;
+    padding: 27px;
+    text-decoration: none;
+    hover:line;
+    color:#f2f2f2;
+}
+</style>
+<script>
+function validate(){  
+	
+	if( document.myForm.cid.value == "" )
+	   {
+	     alert( "Please provide customer ID" );
+	     document.myForm.cid.focus() ;
+	     return false;
+	   }
+	if( document.myForm.fname.value == "" )
+	   {
+	     alert( "Please provide customer first name" );
+	     document.myForm.fname.focus() ;
+	     return false;
+	   }
+	if( document.myForm.lname.value == "" )
+	   {
+	     alert( "Please provide customer last name" );
+	     document.myForm.lname.focus() ;
+	     return false;
+	   }
+	if( document.myForm.addr.value == "" )
+	   {
+	     alert( "Please provide customer Address" );
+	     document.myForm.addr.focus() ;
+	     return false;
+	   }
+	if( document.myForm.city.value == "" )
+	   {
+	     alert( "Please provide customer city " );
+	     document.myForm.city.focus() ;
+	     return false;
+	   }
+	if( document.myForm.country.value == "" )
+	   {
+	     alert( "Please provide customer country" );
+	     document.myForm.country.focus() ;
+	     return false;
+	   }
+	if( document.myForm.phone.value == "" )
+	   {
+	     alert( "Please provide customer phone" );
+	     document.myForm.phone.focus() ;
+	     return false;
+	   }
+	 if( document.myForm.email.value == "" )
+	   {
+	     alert( "Please provide customer mail id!" );
+	     document.myForm.email.focus() ;
+	     return false;
+	   }
+	if( document.myForm.sid.value == "" )
+	   {
+	     alert( "Please provide customer support ID" );
+	     document.myForm.sid.focus() ;
+	     return false;
+	   }
+	return (ture);
+	}
+</script>
+</head>
+<body>
+    <div class="logo">
+<img src="logo.png"/>
+</div>
+<ul>
+<li><a href="#contact"></a></li>
+ <li><a href="#about"></a></li>
+ <li><a href="#contact"></a></li>
+  <li><a href="about.html">About</a></li>
+ <li><a href="contact.html">Contact</a></li>
+<li><a href="Index.html">Music</a></li>
+  <li><a href="1.html">Home</a></li>
+</ul>
+<a href="StaffActivities.jsp"> <input type="submit" id="s2" value="Back" ></a>
+<form action="add.jsp" name="myForm"  onsubmit="return (validate());">
+<table align="center">
+<tr><td> Customer ID <sup>*</sup> :</td><td> <input type="text" name="cid" id="cid"></td></tr>
+<tr><td> First Name <sup>*</sup> :</td><td> <input type="text" name="fname" id="fname"></td></tr>
+<tr><td> Last Name <sup>*</sup> :</td><td> <input type="text" name="lname" id="lname"></td></tr>
+<tr><td> Company:</td><td> <input type="text" name="company" value=""></td></tr>
+<tr><td> Address <sup>*</sup> :</td><td> <input type="text" name="addr" id="addr"></td></tr>
+<tr><td> City <sup>*</sup> :</td><td> <input type="text" name="city" id="city"></td></tr>
+<tr><td> State :</td><td> <input type="text" name="state"></td></tr>
+<tr><td> Country <sup>*</sup> :</td><td> <input type="text" name="country" id="country"></td></tr>
+<tr><td> Postal Code:</td><td> <input type="text" name="pc"></td></tr>
+<tr><td> Phone <sup>*</sup> :</td><td> <input type="text" name="phone" id="phone"></td></tr>
+<tr><td> Fax:</td><td> <input type="text" name="fax" ></td></tr>
+<tr><td> Email <sup>*</sup> :</td><td> <input type="text" name="email" id="email"></td></tr>
+<tr><td> Support Req ID <sup>*</sup> :</td><td> <input type="text" name="sid" id="sid"></td></tr>
+<tr><td colspan="2" align="center"><input type="submit" id="add"></td></tr>
+</table>
+</form>
+</body>
+</html>

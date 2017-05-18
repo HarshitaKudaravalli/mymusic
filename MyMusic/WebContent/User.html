@@ -1,0 +1,99 @@
+<html>
+<head>
+<style>
+.logo{
+float: left;
+margin-top: 15px;
+position:absolute;
+margin-left:30px;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color:black;
+    font-size:30px;
+    font-style:italic;   
+  }
+li {
+    float: right;
+ }
+a:hover{
+color:#ffccff;
+font-size: 120%;
+}
+li a {
+    display: block;
+    padding: 27px;
+    text-decoration: none;
+    hover:line;
+    color:#f2f2f2;
+}
+#d1 {
+margin-top:50px;
+margin-left:500px;
+}
+#s2 {
+height:50px;
+width:120px;
+font-size:25;
+margin-left:1000px;	
+margin-top:5px;
+}
+</style>
+<link href="style.css" rel="stylesheet" />
+<script>
+function validate(){  
+	
+	if( document.myForm.cid.value == "" )
+	   {
+	     alert( "Please provide User ID" );
+	     document.myForm.cid.focus() ;
+	     return false;
+	   }
+	if( document.myForm.user1.value == "1" )
+	   {
+	     alert( "Please select once option" );
+	     document.myForm.user1.focus() ;
+	     return false;
+	   }
+	return (ture);
+}
+</script>
+</head>
+<body>
+<div class="logo">
+<img src="logo.png"/>
+</div>
+<ul>
+<li><a href="#contact"></a></li>
+ <li><a href="#about"></a></li>
+ <li><a href="#contact"></a></li>
+  <li><a href="about.html">About</a></li>
+ <li><a href="contact.html">Contact</a></li>
+<li><a href="Index.html">Music</a></li>
+  <li><a href="1.html">Home</a></li>
+</ul>
+<a href="Index.html"> <input type="submit" id="s2" value="Back" ></a>
+
+<form action="user.jsp" name="myForm" onsubmit="return (validate());">
+<table align="center" id="d1">
+<tr><td style="color:#f2f2f2">Enter User ID: </td><td> <input type ="text" name="my" id="cid">
+</td></tr></table>
+<table align="center" id="d2"><tr><td>
+<select id="user1" name="r" >
+  <option value="1"> </option>
+  <option value="Artist">Artist</option>
+  <option value="Song" >Song</option>
+  <option value="Genre" >Genre</option>
+  <option value="Album" >Album</option>
+ 
+</select>
+</td><td><input type="submit" value="search" id="s1"></td></tr></table>
+</form>
+
+
+</body>
+</html>
